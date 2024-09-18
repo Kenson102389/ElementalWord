@@ -11,6 +11,7 @@ Your task is to implement the function elementalForms(word), which takes one par
 Example
 The word 'snack' can be formed by concatenating the symbols of 3 different combinations of elements:
 
+```
 ----------------------------------------------------
 |       1        |       2        |       3        |
 |---------------------------------------------------
@@ -19,20 +20,26 @@ The word 'snack' can be formed by concatenating the symbols of 3 different combi
 | Actinium  (Ac) | Carbon    (C)  | Potassium (K)  |
 | Potassium (K)  | Potassium (K)  |                |
 ----------------------------------------------------
+```
+
 So elementalForms('snack') should return the following array:
 
+```json
 [
   ['Sulfur (S)', 'Nitrogen (N)', 'Actinium (Ac)', 'Potassium (K)'],
   ['Sulfur (S)', 'Sodium (Na)', 'Carbon (C)', 'Potassium (K)'],
   ['Tin (Sn)', 'Actinium (Ac)', 'Potassium (K)']
 ]
+```
 Guidelines
 Symbols can have length 1, 2 or 3 (this kata uses pre-2016 temporary symbols for elements 113, 115, 117 and 118).
 Capitalization does not matter:
+```
 elementalForms('beach')
 // => [ ['Beryllium (Be)', 'Actinium (Ac)', 'Hydrogen (H)'] ]
 elementalForms('BEACH')
 // => [ ['Beryllium (Be)', 'Actinium (Ac)', 'Hydrogen (H)'] ]
+```
 The order of the returned sub-arrays does not matter, but the order of the strings within each sub-array does matter -- they should be in the order that "spells out" word.
 If word is not an elemental word (that is, no combination of one or more element symbols can form word), return an empty array.
 You do not need to check the type of word. It will always be a (possibly empty) string.
